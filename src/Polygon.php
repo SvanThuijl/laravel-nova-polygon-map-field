@@ -34,7 +34,7 @@ class Polygon extends Field
         if ($request->exists($requestAttribute)) {
             $value = $request[$requestAttribute];
 
-            if ($value{0} == ())
+            if ($value{0} == '(')
                 $model->{$attribute} = SpatialPolygon::fromString($value);
             else
                 $model->{$attribute} = SpatialPolygon::fromJson($value);
