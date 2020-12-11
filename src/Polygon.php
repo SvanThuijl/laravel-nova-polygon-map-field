@@ -51,6 +51,7 @@ class Polygon extends Field
 
         if (!$value)
             $value = $this->resolveDefaultValue(app(NovaRequest::class));
+        dd($value);
         if (!$value) {
             // Default area in Riyadh
             return new SpatialPolygon([
