@@ -50,7 +50,7 @@ class Polygon extends Field
         $value = parent::resolveAttribute($resource, $attribute);
 
         if (!$value)
-            $value = $this->default();
+            $value = $this->resolveDefaultValue();
         if (!$value) {
             // Default area in Riyadh
             return new SpatialPolygon([
