@@ -49,6 +49,8 @@ class Polygon extends Field
     {
         $value = parent::resolveAttribute($resource, $attribute);
 
+        if (!$value)
+            $value = $this->default();
         if (!$value) {
             // Default area in Riyadh
             return new SpatialPolygon([
